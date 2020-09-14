@@ -1,15 +1,14 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { Component, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-grafico-barra-horizontal',
   templateUrl: './grafico-barra-horizontal.component.html',
   styleUrls: ['./grafico-barra-horizontal.component.css']
 })
-export class GraficoBarraHorizontalComponent implements OnDestroy{
+export class GraficoBarraHorizontalComponent{
 
-  results: any[] = [
+  /* results: any[] = [
     {
       name: 'Juego 1',
       value: 20
@@ -26,7 +25,8 @@ export class GraficoBarraHorizontalComponent implements OnDestroy{
       name: 'Juego 4',
       value: 30
     }
-  ];
+  ]; */
+  @Input() results: any[] = [];
   // options
   showXAxis = true;
   showYAxis = true;
@@ -39,10 +39,10 @@ export class GraficoBarraHorizontalComponent implements OnDestroy{
 
   colorScheme = 'nightLights';
 
-  intervalo;
-  constructor() {
+  /* intervalo; */
+  constructor() {}
 
-    this.intervalo = setInterval(() => {
+    /* this.intervalo = setInterval(() => {
       console.log('tick');
       const newResults = [...this.results];
       // tslint:disable-next-line: forin
@@ -55,7 +55,6 @@ export class GraficoBarraHorizontalComponent implements OnDestroy{
 
   ngOnDestroy(){
     clearInterval(this.intervalo);
-  }
-
+  } */
 
 }

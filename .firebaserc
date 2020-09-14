@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "goty-app-9d694": {
+      "hosting": {
+        "GOTY": [
+          "goty-app-9d694"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "goty-app-9d694"
+  }
+}
